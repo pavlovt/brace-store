@@ -1,0 +1,39 @@
+{
+  "name": "store-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Small online store backend (NestJS + Prisma + SQLite)",
+  "scripts": {
+    "postinstall": "prisma generate",
+    "build": "prisma generate && nest build",
+    "prestart": "prisma migrate deploy",
+    "dev": "nest start --watch",
+    "start": "nest start",
+    "prestart:dev": "prisma migrate deploy",
+    "start:dev": "nest start --watch",
+    "prestart:prod": "prisma migrate deploy",
+    "start:prod": "node dist/main.js",
+    "db:migrate": "prisma migrate dev",
+    "db:studio": "prisma studio",
+    "db:reset": "prisma migrate reset --force"
+  },
+  "dependencies": {
+    "@nestjs/common": "^11.2.6",
+    "@nestjs/core": "^11.2.6",
+    "@nestjs/platform-express": "^11.2.6",
+    "@prisma/adapter-better-sqlite3": "^7.10.0",
+    "@prisma/client": "^7.10.0",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.15.1",
+    "dotenv": "^18.0.4",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.2"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^11.0.24",
+    "@types/express": "^5.0.6",
+    "@types/node": "^22.20.4",
+    "prisma": "^7.10.0",
+    "typescript": "^5.9.3"
+  }
+}

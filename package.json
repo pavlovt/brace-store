@@ -1,0 +1,15 @@
+{
+  "name": "brace-store",
+  "private": true,
+  "description": "A SvelteKit storefront built twice, in BraceML and HTML, with a NestJS/Prisma/SQLite API",
+  "scripts": {
+    "install:all": "npm install && npm --prefix backend install && npm --prefix frontend install",
+    "dev": "concurrently -k -n api,web -c blue,magenta \"npm --prefix backend run start:dev\" \"npm --prefix frontend run dev\"",
+    "build": "npm --prefix backend run build && npm --prefix frontend run build",
+    "install:html": "npm --prefix frontend-html install",
+    "dev:html": "concurrently -k -n api,web -c blue,magenta \"npm --prefix backend run start:dev\" \"npm --prefix frontend-html run dev\""
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.5"
+  }
+}
