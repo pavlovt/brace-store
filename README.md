@@ -57,8 +57,8 @@ td class="px-4 py-3" > a class="text-brand-700 hover:underline" href="/orders/{o
   markup are `class={x}` becoming `class="{x}"`, and whitespace between table cells and flex items
   that the browser ignores.
 - **Type checking:** `npm run check` works in `frontend-html/` only. See [BraceML templates](#braceml-templates).
-- **Tooling:** HTML has the full Svelte language server. BraceML has highlighting but no
-  autocomplete or diagnostics while typing.
+- **Tooling:** HTML has the full Svelte language server. BraceML has highlighting and shows
+  errors while typing, but templates in `.svelte` files get no autocomplete.
 
 ## BraceML templates
 
@@ -67,7 +67,6 @@ Component markup lives in `<template lang="braceml">` blocks, compiled by the pr
 
 - Write Tailwind classes in `class="..."`, not as selectors (`.mb-4`). Tailwind scans the
   source files and doesn't detect selector classes, so they get no CSS.
-- BraceML isn't on npm yet, so `frontend/vendor/` holds its 0.1.0 package tarballs.
 - `npm run check` doesn't work on these components, because `svelte-check` reads the
   BraceML block as Svelte markup. Template expressions aren't type-checked.
 
