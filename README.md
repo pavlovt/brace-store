@@ -1,4 +1,4 @@
-# BraceML Store
+<img src=".github/banner.png" alt="brace-store: one SvelteKit store, built with BraceML and with HTML templates" width="100%">
 
 A small online store, built twice to compare BraceML with HTML templates:
 
